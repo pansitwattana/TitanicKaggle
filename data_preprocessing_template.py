@@ -7,8 +7,8 @@ import pandas as pd
 
 # Importing the dataset
 dataset = pd.read_csv('train.csv')
-X = dataset.iloc[:, :-1].values
-y = dataset.iloc[:, 3].values
+X = dataset.iloc[:, 1:].values
+y = dataset.iloc[:, 0].values
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split
